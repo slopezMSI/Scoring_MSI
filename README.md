@@ -39,11 +39,7 @@ Clonez ce dépôt :
 text
 git clone https://github.com/votre-username/Scoring_MSI.git
 
-Installez les dépendances :
-text
-pip install -r requirements.txt
-
-Assurez-vous que le fichier sweetDB.xlsx est présent dans le dossier data/.
+Assurez-vous que le fichier sweetnersDB.xlsx est présent dans le dossier data/.
 
 ## 5. Utilisation
 Chaque notebook peut être exécuté indépendamment. Commencez par le niveau "Basic" pour une compréhension initiale, puis progressez vers les niveaux "Medium" et "Premium" pour des analyses plus approfondies.
