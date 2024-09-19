@@ -8,11 +8,11 @@ Il s'agit d'une introduction aux techniques de régression et de classification 
 ## Contenu
 Ce dossier contient quatre notebooks Jupyter et un fichier .py:
 - `representation_fingerprint.ipynb` : Utilise une représentation simple des molécules basée sur les "fingerprints" pour effectuer des tâches de régression et de classification.
-- `methods_fingerprint.py' : propose les méthodes automatisées issues de representation_fingerprint.ipynb, afin de rendre la lecture des prochains notebooks plus agréable.
+- `methods_fingerprint.py`: propose les méthodes automatisées issues de representation_fingerprint.ipynb, afin de rendre la lecture des prochains notebooks plus agréable.
 - Propose une approche plus complexe en combinant les fingerprints avec l'information de la famille chimique.
-   - `representation_fingerprint_family.ipynb' : concaténation des représentations fingerprint et famille chimique
-   - `representation_fingerprint_family_V2.ipynb' : méthode ensembliste 
-   - `representation_fingerprint_family_V3.ipynb' : représentation combinée par réseau de neurones
+   - `representation_fingerprint_family.ipynb`: concaténation des représentations fingerprint et famille chimique
+   - `representation_fingerprint_family_V2.ipynb`: méthode ensembliste 
+   - `representation_fingerprint_family_V3.ipynb`: représentation combinée par réseau de neurones
 
 ## Objectifs
 - Fournir un point de départ pour l'analyse de données non quantitatives
