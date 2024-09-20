@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from deepchem.feat import MolGraphConvFeaturizer
 from deepchem.feat import CircularFingerprint
 from sklearn.model_selection import GridSearchCV
-from sklearn.svm import SVR
+from sklearn.svm import SVC
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
@@ -196,6 +196,8 @@ def scoring(y_tr,y_test,X_tr,X_test,sweet_thr,model):
         model = DecisionTreeClassifier(random_state=42)
     elif model == "RandomF":
         model = RandomForestClassifier(n_estimators=100, random_state=42)
+    elif model == "SVM":
+        model = SVC(random_state=42)
     
     model.fit(X_tr, target_tr)
 
@@ -248,6 +250,14 @@ def scoring_GridSearch(y_tr,y_test,X_tr,X_test,sweet_thr,model):
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [1, 2, 4],
             'max_features': ['auto', 'sqrt', 'log2']
+        }
+    elif model == "SVM":
+        model = SVC(random_state=42)
+        param_grid = {
+            'C': [0.1, 1, 10, 100],
+            'kernel': ['rbf', 'linear'],
+            'gamma': ['scale', 'auto', 0.1, 1],
+            
         }
     grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, n_jobs=1, verbose=2)
 
